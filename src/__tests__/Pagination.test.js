@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Pagination from '../Pagination'; // Adjust path as needed
+import Pagination from '../Pagination';
 
 test('renders pagination buttons and dropdown', () => {
   render(<Pagination totalPages={5} currentPage={1} onPageChange={() => {}} />);
@@ -31,8 +31,8 @@ test('handles page change correctly', () => {
   );
 
   // Change page using dropdown
-  fireEvent.change(screen.getByRole('combobox'), { target: { value: '2' } });
+  fireEvent.change(screen.getByRole('combobox'), { target: { value: '5' } });
 
   // Verify that page change handler is called with the correct page number
-  expect(handlePageChange).toHaveBeenCalledWith(2);
+  expect(handlePageChange).toHaveBeenCalledWith(5);
 });

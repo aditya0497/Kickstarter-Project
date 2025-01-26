@@ -10,7 +10,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
     <div className="pagination" role="navigation" aria-label="Pagination controls">
       <button
         className="page-btn"
-        onClick={() => onPageChange(currentPage - 1)}
+        onClick={() => onPageChange((currentPage) => currentPage - 1)}
         disabled={currentPage === 1}
         aria-label="Previous page"
       >
@@ -32,7 +32,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
 
       <button
         className="page-btn"
-        onClick={() => onPageChange(currentPage + 1)}
+        onClick={() => onPageChange((currentPage) => currentPage + 1)}
         disabled={currentPage === totalPages}
         aria-label="Next page"
       >

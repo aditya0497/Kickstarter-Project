@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import App from '../App'; // Adjust path as needed
+import App from '../App';
 
 test('renders table headers and pagination', () => {
   render(<App />);
